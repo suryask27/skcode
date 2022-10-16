@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+	    int m=n;
+	    int rem=0;
+	    int sum=0;
+	    while(m>0)
+	    {
+	        int fact=1;
+	        rem=m%10;
+	        while(rem>0)
+	        {
+	            fact=fact*rem;
+	            rem--;
+	        }
+	       sum=fact+sum;
+	       m/=10;
+	    }
+	    if(sum==n)
+	        System.out.println("Yes");
+	    else
+	        
+	        System.out.println("No");
+	}
+}
