@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+public static void main(String[] args){
+   Scanner s=new Scanner(System.in);  
+   int n=s.nextInt();
+   int m=n;
+   int rem=0;
+   int sum=0;
+   int product=1;
+   while(n!=0)
+   {
+       rem=n%10;
+       sum=sum+rem;
+       product=product*rem;
+       n/=10;
+   }
+   if(sum+product==m)
+    System.out.println("Yes");
+   else
+    System.out.println("No");
+ }
+}
