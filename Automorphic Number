@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main
+{
+public static void main(String[] args){
+   Scanner s=new Scanner(System.in);  
+   int n=s.nextInt();
+   int m=n;
+   int rem;
+   int sum=0;
+   int q=n*n,rem1;
+   while(n!=0)
+   {
+       rem=n%10;
+       rem1=q%10;
+       if(rem!=rem1)
+       sum=1;
+       n/=10;
+       q=q/10;
+   }
+   if(sum==0)
+    System.out.println("Yes");
+   else
+    System.out.println("No");
+ }
+}
