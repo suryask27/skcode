@@ -1,0 +1,17 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int t=n;
+        for(int i=1;i<=t;i++)
+        {
+            double sq=Math.sqrt(i);
+            if(sq-Math.floor(sq)==0)
+            {
+            System.out.print(i);
+            }
+        }
+    }
+}//prefect square number programs
