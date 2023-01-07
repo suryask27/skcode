@@ -1,0 +1,42 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int t[]=new int [n];
+        for(int i=0;i<n;i++)
+        {
+          t[i]=s.nextInt(); 
+        }
+        for(int i=0;i<t.length;i++)
+        {
+        int sq=t[i];    
+        int sum=0,s1=0;
+        while(sq>0)
+        {
+            int r=sq%10;
+            sum=sum+r;
+            sq=sq/10;
+        }
+        int sum1=sum;
+        int ss1=0;
+        do
+        {
+            ss1=0;
+            while(sum1>0)
+            {
+                int r1=sum1%10;
+                ss1=ss1+r1;
+                sum1=sum1/10;
+            }
+            sum1=ss1;
+        }while(sum1>=9);
+        //System.out.print(ss1);
+        double dd=Math.sqrt(ss1);
+        if(dd-Math.floor(dd)!=0){
+        System.out.print(t[i]);
+        }
+        }
+}
+}
